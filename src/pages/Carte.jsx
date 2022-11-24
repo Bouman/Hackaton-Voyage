@@ -1,9 +1,15 @@
-import React, {useRef} from 'react';
-import IMG from "../assets/img/carte.png"
+import React, {useEffect, useRef, useState, useContext} from 'react';
+import IMG from "../assets/img/carte.png";
 import GridPosition from '../components/GridPosition';
+import Context from "../contexts/Context";
 
 function Carte() {
-const refCarte = useRef(null);
+  const [list, setList] = useState(['Item 1','Item 2','Item 3','Item 4','Item 5','Item 6']);
+  const refCarte = useRef(null);
+  const refMonu = useRef(null);
+
+  const { moveMap } = useContext(Context);
+
   // mes Variables
 let startY;
 let startX;
@@ -11,7 +17,7 @@ let scrollLeft;
 let scrollTop;
 let isDown;
 
-// Mes fonctions scrolling mouse
+  // Mes fonctions scrolling mouse
   function mouseIsDown(e){
     isDown = true;
     startY = e.pageY - refCarte.current.offsetTop;
@@ -32,7 +38,6 @@ let isDown;
       const y = e.pageY - refCarte.current.offsetTop;
       const walkY = y - startY;
       refCarte.current.scrollTop = scrollTop - walkY;
-  
       //Move Horizontally
       const x = e.pageX - refCarte.current.offsetLeft;
       const walkX = x - startX;
@@ -40,21 +45,60 @@ let isDown;
     }
   }
 
+useEffect(() => {
+  if(moveMap){
+    console.log(moveMap);
+  } else {
+    console.log(moveMap)
+  }
+}, [moveMap]);
+
+// Action et Drag and Drop functions //
+    const dragItem = useRef();
+    const dragOverItem = useRef();
+////DRAG DROP
+const dragStart = (e, position) => {
+    dragItem.current = position;
+    console.log(e.target.innerHTML);
+  };
+const dragEnter = (e, position) => {
+    dragOverItem.current = position;
+    console.log(e.target.innerHTML);
+};
+const drop = (e) => {
+    const copyListItems = [...list];
+    const dragItemContent = copyListItems[dragItem.current];
+    copyListItems.splice(dragItem.current, 1);
+    copyListItems.splice(dragOverItem.current, 0, dragItemContent);
+    dragItem.current = null;
+    dragOverItem.current = null;
+    setList(copyListItems);
+};
 
   return (
-    <>
-        <div
-        className="carte-wrapper"
-        ref={refCarte}
-        id="items-carte"
-        onMouseDown={e => mouseIsDown(e)}
-        onMouseUp={e => mouseUp(e)}
-        onMouseLeave={e=> mouseLeave(e)}
-        onMouseMove={e=> mouseMove(e)}
-        >
+      <> 
+        {moveMap ?
+                <div
+                className="carte-wrapper"
+                ref={refCarte}
+                id="items-carte"
+                onMouseDown={e => mouseIsDown(e)}
+                onMouseUp={e => mouseUp(e)}
+                onMouseLeave={e=> mouseLeave(e)}
+                onMouseMove={e=> mouseMove(e)} 
+                >
+                <GridPosition ref={refMonu}/>
+                <img src={IMG} alt="carte"></img>
+              </div>
+        :
+                <div
+                className="carte-wrapper"
+                ref={refCarte}
+                id="items-carte" 
+        >          <GridPosition ref={refMonu}/>
           <img src={IMG} alt="carte"></img>
         </div>
-        <GridPosition />
+        }
       </>
   );
 }

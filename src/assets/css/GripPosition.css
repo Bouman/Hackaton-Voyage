@@ -1,6 +1,6 @@
 .Monument-Zone{
     float: left;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     width: 50px;
     background-color: aqua;
@@ -10,38 +10,38 @@
     font-weight: bold;
 }
 .Monument-Zone.index1{
-    right: 50px;
+    left: 50px;
     top: 250px
 }
 .Monument-Zone.index2{
-    right: 150px;
+    left: 150px;
     top: 50px
 }
 .Monument-Zone.index3{
-    right: 800px;
+    left: 800px;
     top: 140px
 }
 .Monument-Zone.index4{
-    right: 10px;
+    left: 10px;
     top: 300px
 }
 .Monument-Zone.index5{
-    right: 560px;
+    left: 560px;
     top: 100px
 }
 .Monument-Zone.index6{
-    right: 460px;
+    left: 460px;
     top: 400px
 }
 .Monument-Zone.index7{
-    right: 260px;
+    left: 260px;
     top: 300px
 }
 .Monument-Zone.index8{
-    right: 360px;
+    left: 360px;
     top: 200px
 }
 .Monument-Zone.index9{
-    right: 760px;
+    left: 760px;
     top: 100px
 }

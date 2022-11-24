@@ -1,10 +1,10 @@
-
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import "../assets/css/GripPosition.css"
 import monumentList from '../Data/MonumentList';
-
+import Context from '../contexts/Context';
 
 function GridPosition (){
+    const [isSwiping, setSwiping] = useState(false);
     // Action et Drag and Drop functions //
   const dragItem = useRef();
   const dragOverItem = useRef();
@@ -29,12 +29,14 @@ function GridPosition (){
         setList(copyListItems);
     };
 
+    const { setmoveMap } = useContext(Context);
+
     return(
         <>
         {list && list.map((item, index) => (
-          <div 
+          <div
             className={`Monument-Zone index${index + 1}`}
-            key={item[index]}    
+            key={item[index]}
             style={{
               /* margin: "20px auto",
               textAlign: "center",
@@ -47,12 +49,18 @@ function GridPosition (){
               resort: true,
               scale: false,
             }}
-            key={index}
+            onMouseLeave={setmoveMap}
+            onMouseDown={setmoveMap}
+            onMouseMove={setmoveMap}
+            onMouseUp={setmoveMap}
+            onTouchStart={(e) => dragStart(e, index)}
+            onTouchMove={(e) => dragStart(e, index)}
+            onTouchEnd={drop}
             onDragStart={(e) => dragStart(e, index)}
             onDragEnter={(e) => dragEnter(e, index)}
             onDragEnd={drop}
             draggable>
-              {item}
+                {item}
           </div>
         ))}
         </>
