@@ -1,8 +1,6 @@
-import React from 'react';
-import monumentList from '../Data/MonumentsList';
+import monumentList from '../Data/MonumentList'
 
 function ModaleMonuments ({id, picture, monumentName, monumentType, monumentSize, countryOfMonument, constructionDate, visitorNumber, symbolique, author, cityOfMonument, changeTexte}) {
-    
     return (
     <>
         <div className='main_div'>

@@ -11,8 +11,12 @@ function App() {
           <header className='header'>
             <img src={title}/>
           </header>
+          
             <Carte />
-            {/* <ModaleMonuments /> */}
+            {  /*  {monumentList.map((e) =>
+        <ModaleMonuments {...e} changeTexte={5}/>
+            )}*/}
+
           <div className='footer'>FOOTER</div>
         </div>
     </div>
