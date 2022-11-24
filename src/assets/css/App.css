@@ -1,0 +1,15 @@
+.container {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 5% auto 5%; 
+  min-height: 100vh;
+}
+.header{
+  border: black solid 1px;
+color:darkgrey;
+}
+
+.footer{
+  border: black solid 1px;
+  color:darkgrey;
+}

@@ -1,0 +1,14 @@
+.main_div {
+    display: grid;
+    grid-template-columns: (2, 2);
+    height: 10rem;
+    width: 15rem;
+}
+.monument_image {
+    grid-column: 1;
+    grid-row: 1;
+}
+.description {
+    grid-column: 2;
+    grid-row: 2;
+}
