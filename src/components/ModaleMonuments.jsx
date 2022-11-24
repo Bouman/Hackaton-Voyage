@@ -7,7 +7,7 @@ function ModaleMonuments () {
 
     return (
         <div className='main_div'>
-            {monumentList.map((monumentName,id) =>
+            {monumentList.map((monumentList,id) =>
                 <img className='monument_image' src={monumentList.picture} />
                     <div className='description'>
                         <div className='monumentTitle'>{monumentList.MonumentName}</div>

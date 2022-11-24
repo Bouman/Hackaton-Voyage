@@ -9,6 +9,7 @@ function App() {
             LE MONDE A L'ENVERS 
           </header>
           <Carte />
+          <ModaleMonuments />
           <div className='footer'>FOOTER</div>
         </div>
     </div>
