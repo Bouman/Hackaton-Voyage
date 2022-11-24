@@ -1,17 +1,16 @@
-import {useRef} from 'react';
-import imgcarte from '../assets/img/carte.png';
-import '../assets/css/Carte.css';
+import React, {useRef} from 'react';
+import IMG from "../assets/img/carte.png"
 
 function Carte() {
 const refCarte = useRef(null);
-
   // mes Variables
 let startY;
 let startX;
 let scrollLeft;
 let scrollTop;
 let isDown;
-  // Mes fonctions scrolling mouse
+
+// Mes fonctions scrolling mouse
   function mouseIsDown(e){
     isDown = true;
     startY = e.pageY - refCarte.current.offsetTop;
@@ -42,19 +41,35 @@ let isDown;
 
 
   return (
-    <>
         <div
-        className='carte'
+        className="carte"
         ref={refCarte}
-        id="items-carte"  
+        id="items-carte"
         onMouseDown={e => mouseIsDown(e)}
         onMouseUp={e => mouseUp(e)}
         onMouseLeave={e=> mouseLeave(e)}
         onMouseMove={e=> mouseMove(e)}
         >
-            <img className="item" src={imgcarte} alt="carte"></img>
+            <img src={IMG} alt="carte"></img>
+            <div className="item"> </div>
+            <div className="item"></div>
+            <div className="item" >  </div>
+            <div className="item"> </div>
+            <div className="item"></div>
+            <div className="item" > </div>
+            <div className="item"> </div>
+            <div className="item"> </div>
+            <div className="item" > </div>
+            <div className="item"> </div>
+            <div className="item"> </div>
+            <div className="item" > </div>
+            <div className="item"> </div>
+            <div className="item"> </div>
+            <div className="item" > </div>
+            <div className="item"> </div>
+            <div className="item"> </div>
+            <div className="item" > </div>
         </div>
-    </>
   );
 }
 

@@ -1,16 +1,17 @@
 import React from 'react';
-import ModaleMonuments from './ModaleMonuments';
 import "./ModaleMonuments.css";
 import monumentList from '../Data/MonumentList';
 
 function ModaleMonuments () {
 
     return (
+    <>
         <div className='main_div'>
             {monumentList.map((monumentList,id) =>
-                <img className='monument_image' src={monumentList.picture} />
+                <div key={id}>
+                <img className='monument_image' src={monumentList.picture} alt="Description des monuments"/>
                     <div className='description'>
-                        <div className='monumentTitle'>{monumentList.MonumentName}</div>
+                        <div className='monumentTitle'>{monumentList.monumentName}</div>
                         <div className='monumentType'>{monumentList.monumentType}</div>
                         <div className='monumentSize'>{monumentList.monumentSize}</div>
                         <div className='monumentCountry'>{monumentList.countryOfMonument}</div>
@@ -22,8 +23,10 @@ function ModaleMonuments () {
                         {/*passer les props pour chaque catégorie dans la description*/}
                         <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur repellendus natus, temporibus cum excepturi vel aliquam quia ad voluptas ipsam, quae accusantium eos magnam consectetur quos nostrum recusandae, a impedit!</p>
                     </div>
+                </div>
             )}
         </div>
+    </>
     )
 }
 export default ModaleMonuments;

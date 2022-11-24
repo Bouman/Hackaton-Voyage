@@ -1,5 +1,7 @@
+import React from "react";
 import Carte from "./pages/Carte"
 import './assets/css/App.css';
+import ModaleMonuments from "./components/ModaleMonuments";
 
 function App() {
   return (
@@ -8,8 +10,8 @@ function App() {
           <header className='header'>
             LE MONDE A L'ENVERS 
           </header>
-          <Carte />
-          <ModaleMonuments />
+            <Carte />
+            <ModaleMonuments />
           <div className='footer'>FOOTER</div>
         </div>
     </div>
