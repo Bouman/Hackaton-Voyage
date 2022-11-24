@@ -1,0 +1,31 @@
+.Monument-Zone{
+    float: left;
+    position: relative;
+    z-index: 1000;
+    width: 50px;
+    background-color: aqua;
+    border: black solid 1px;
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.Monument-Zone.index1{
+    right: 50px;
+    top: 250px
+}
+.Monument-Zone.index2{
+    right: 150px;
+    top: 50px
+}
+.Monument-Zone.index3{
+    right: 800px;
+    top: 140px
+}
+.Monument-Zone.index4{
+    right: 10px;
+    top: 300px
+}
+.Monument-Zone.index5{
+    right: 60px;
+    top: 100px
+}

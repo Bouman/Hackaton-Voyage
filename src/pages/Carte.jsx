@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import IMG from "../assets/img/carte.png"
+import GridPosition from '../components/GridPosition';
 
 function Carte() {
 const refCarte = useRef(null);
@@ -50,25 +51,9 @@ let isDown;
         onMouseLeave={e=> mouseLeave(e)}
         onMouseMove={e=> mouseMove(e)}
         >
-            <img src={IMG} alt="carte"></img>
-            <div className="item"> </div>
-            <div className="item"></div>
-            <div className="item" >  </div>
-            <div className="item"> </div>
-            <div className="item"></div>
-            <div className="item" > </div>
-            <div className="item"> </div>
-            <div className="item"> </div>
-            <div className="item" > </div>
-            <div className="item"> </div>
-            <div className="item"> </div>
-            <div className="item" > </div>
-            <div className="item"> </div>
-            <div className="item"> </div>
-            <div className="item" > </div>
-            <div className="item"> </div>
-            <div className="item"> </div>
-            <div className="item" > </div>
+          <GridPosition />
+          <img src={IMG} alt="carte"></img>
+            
         </div>
   );
 }
