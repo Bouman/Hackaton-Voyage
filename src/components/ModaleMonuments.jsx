@@ -1,30 +1,27 @@
 import React from 'react';
-import "./ModaleMonuments.css";
-import monumentList from '../Data/MonumentList';
+import monumentList from '../Data/MonumentsList';
 
-function ModaleMonuments () {
-
+function ModaleMonuments ({id, picture, monumentName, monumentType, monumentSize, countryOfMonument, constructionDate, visitorNumber, symbolique, author, cityOfMonument, changeTexte}) {
+    
     return (
     <>
         <div className='main_div'>
-            {monumentList.map((monumentList,id) =>
-                <div key={id}>
-                <img className='monument_image' src={monumentList.picture} alt="Description des monuments"/>
+            <div key={id}>
+                <img className='monument_image' src={picture} alt="Description des  monuments"/>
                     <div className='description'>
-                        <div className='monumentTitle'>{monumentList.monumentName}</div>
-                        <div className='monumentType'>{monumentList.monumentType}</div>
-                        <div className='monumentSize'>{monumentList.monumentSize}</div>
-                        <div className='monumentCountry'>{monumentList.countryOfMonument}</div>
-                        <div className='constructionDate'>{monumentList.constructionDate}</div>
-                        <div className='visitorNumber'>{monumentList.visitorNumber}</div> 
-                        <div className='symbol'>{monumentList.symbolique}</div> 
-                        <div className='author'>{monumentList.author}</div>   
-                        <div className='cityName'>City</div>
-                        {/*passer les props pour chaque catégorie dans la description*/}
-                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur repellendus natus, temporibus cum excepturi vel aliquam quia ad voluptas ipsam, quae accusantium eos magnam consectetur quos nostrum recusandae, a impedit!</p>
+                        <div className='monumentTitle'>{monumentName}</div>
+                        <div className='monumentType'>{monumentType}</div>
+                        <div className='monumentSize'>{monumentSize}</div>
+                        <div className='monumentCountry'>{countryOfMonument}</div>
+                        <div className='constructionDate'>{constructionDate}</div>
+                        <div className='visitorNumber'>{visitorNumber}</div> 
+                        <div className='symbol'>{symbolique}</div> 
+                        <div className='author'>{author}</div>   
+                        <div className='cityName'>{cityOfMonument}</div>
+                        <p>{`${monumentName}. Ce monument est situé en ${monumentList[changeTexte].cityOfMonument} en ${monumentList[changeTexte].countryOfMonument}. Il a été réalisé par ${author} ${constructionDate}. Mesurant près de ${monumentSize}, symbolisant ${monumentList[changeTexte].symbolique}, ${monumentList[id].monumentType} qui ammène de nombreux touristes chaque année, environ ${visitorNumber}, et alimente toujours l'imagination des Hommes.`} 
+                        </p>
                     </div>
-                </div>
-            )}
+            </div>
         </div>
     </>
     )

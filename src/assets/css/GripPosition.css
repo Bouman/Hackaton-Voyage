@@ -1,6 +1,6 @@
 .Monument-Zone{
     float: left;
-    position: relative;
+    position: absolute;
     z-index: 1000;
     width: 50px;
     background-color: aqua;
@@ -26,6 +26,22 @@
     top: 300px
 }
 .Monument-Zone.index5{
-    right: 60px;
+    right: 560px;
+    top: 100px
+}
+.Monument-Zone.index6{
+    right: 460px;
+    top: 400px
+}
+.Monument-Zone.index7{
+    right: 260px;
+    top: 300px
+}
+.Monument-Zone.index8{
+    right: 360px;
+    top: 200px
+}
+.Monument-Zone.index9{
+    right: 760px;
     top: 100px
 }
