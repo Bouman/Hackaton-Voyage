@@ -27,16 +27,19 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
       <div className="App">
         <div className="container">
           <header className={invert ? "header" : "footer"}>
-            <img src={title} alt="Inversion du titre"/>
-          <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
-        {" "}
-          </button>
+            <img src={title} alt="Inversion du titre" className="img"/>
           </header>
             <Carte />
              {monumentList.map((e) =>
         <ModaleMonuments {...e} changeTexte={5}/>
             )}
-          <footer className={invert? "footer" : "header"}>Hackathon - 2022</footer>
+          <footer className={invert? "footer" : "header"}>Hackathon - 2022
+            <div>
+                <button onClick={()=> setInvert(!invert)} type="checkbox" className="btn">
+              {" "}
+                </button>
+              </div>
+          </footer>
         </div>
       </div>
     </Context.Provider>

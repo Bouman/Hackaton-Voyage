@@ -18,10 +18,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .carte-wrapper{
-  /* background-image: url("../img/carte.png"); */
   position: relative;
   top:5vh;
   right: 0;
@@ -61,17 +60,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .btn {
   display: block;
   position: fixed;
-  /* right: 4vw;
-  top: 3vh; */
-  z-index: 10;
+  margin-left: 60vh;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: yellow;
 }
 
-/* .btn img {
-  cursor: url("../../cursor/cursor.cur"), auto;
-} */
+
+
 
