@@ -1,0 +1,17 @@
+.main_div {
+    position: absolute;
+    display: flex;
+    height: 10rem;
+    width: 15rem;
+}
+.Modale-close {
+    font-weight: 900;
+    font-size: larger;
+    margin-left: 70vw;
+  }
+.monument_image {
+  
+}
+.description {
+  
+}

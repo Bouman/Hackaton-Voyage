@@ -47,9 +47,7 @@ let isDown;
 
 useEffect(() => {
   if(moveMap){
-    console.log(moveMap);
   } else {
-    console.log(moveMap)
   }
 }, [moveMap]);
 

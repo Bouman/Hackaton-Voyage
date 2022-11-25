@@ -11,37 +11,41 @@
 }
 .Monument-Zone.index1{
     left: 50px;
-    top: 250px
+    top: 250px;
 }
 .Monument-Zone.index2{
     left: 150px;
-    top: 50px
+    top: 650px;
 }
 .Monument-Zone.index3{
     left: 800px;
-    top: 140px
+    top: 140px;
 }
 .Monument-Zone.index4{
     left: 10px;
-    top: 300px
+    top: 300px;
 }
 .Monument-Zone.index5{
-    left: 560px;
-    top: 100px
+    left: 1037px;
+    top: 460px;
 }
 .Monument-Zone.index6{
     left: 460px;
-    top: 400px
+    top: 400px;
 }
 .Monument-Zone.index7{
     left: 260px;
-    top: 300px
+    top: 300px;
 }
 .Monument-Zone.index8{
     left: 360px;
-    top: 200px
+    top: 200px;
 }
 .Monument-Zone.index9{
-    left: 760px;
-    top: 100px
+    left: 1041px;
+    top: 706px;
+}
+.Monument-Zone.index10{
+    left: 160px;
+    top: 660px;
 }
