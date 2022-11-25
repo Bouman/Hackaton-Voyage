@@ -1,7 +1,7 @@
 .Monument-Zone {
   float: left;
-  position: relative;
-  z-index: 1000;
+  position: absolute;
+  z-index: auto;
   width: 50px;
   padding: 5px;
   color: #FFFFFF;
@@ -15,8 +15,8 @@
 }
 
 .Monument-Zone.index2 {
-  left: 560px;
-  top: 555px;
+  left: 614px;
+  top: 465px;
 }
 
 .Monument-Zone.index3 {
@@ -25,36 +25,36 @@
 }
 
 .Monument-Zone.index4 {
-  left: 815px;
-  top: 492px;
+  left: 937px;
+  top: 367px;
 }
 
 .Monument-Zone.index5 {
-  left: 786px;
-  top: 549px;
+  left: 970px;
+  top: 430px;
 }
 
 .Monument-Zone.index6 {
-  left: 798px;
-  top: 606px;
+  left: 1029px;
+  top: 475px;
 }
 
 .Monument-Zone.index7 {
-  left: 852px;
-  top: 672px;
+  left: 1131px;
+  top: 562px;
 }
 
 .Monument-Zone.index8 {
-  left: 1095px;
-  top: 718px;
+  left: 1411px;
+  top: 616px;
 }
 
 .Monument-Zone.index9 {
-  left: 1161px;
-  top: 754px;
+  left: 1555px;
+  top: 640px;
 }
 
 .Monument-Zone.index10 {
-  left: 1164px;
-  top: 581px;
+  left: 1613px;
+  top: 534px;
 }

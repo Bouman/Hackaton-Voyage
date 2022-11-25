@@ -1,10 +1,10 @@
 import ModaleMonuments from '../components/ModaleMonuments'
 import monumentList from '../Data/MonumentList'
 
-function ModaleDisplay({ id, openMouseOver, setOpenMouseOver }) {
+function ModaleDisplay({ id, openMouseOver, setOpenMouseOver, monumentPosition }) {
   return (
     <>
-      <ModaleMonuments id={id} openMouseOver={openMouseOver} />
+      <ModaleMonuments id={id} openMouseOver={openMouseOver} monumentPosition ={monumentPosition} />
     </>
   )
 }

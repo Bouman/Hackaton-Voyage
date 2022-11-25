@@ -2,28 +2,19 @@ import React, { useState } from "react";
 import Carte from "./pages/Carte";
 import './assets/css/App.css';
 import Context from './contexts/Context';
-import monumentList from "./Data/MonumentList";
-import ModaleMonuments from "./components/ModaleMonuments";
 import "./assets/css/App.css";
 import title from "./assets/img/title_reverse.png";
 
-//rotation du titre
-function handleMouseOver(e) {
-  e.target.style.transform = "rotate(180deg)";
-}
-
-function handleMouseLeave(e) {
-  e.target.style.transform = "translate(0,0)";
-}
-
 function App() {
 
+const [isLoading, setIsLoading] = useState(false);
 const [invert, setInvert] = useState(true);
 const [moveMap, setmoveMap] = useState(true);
 const [openMouseOver, setOpenMouseOver] = useState(null);
+const order = ["Statue de l'île de paques", "Statue de la liberté", "Le Christ de Rio", "La Tour de Londres", "La tour Effeil", "Le Colissé", "Les Pyramides", "Le Taj Mahal", "Le Temple de Bouda d'emmeraude"];
 
   return (
-    <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver }}>
+    <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver, order, isLoading, setIsLoading }}>
       <div className="App">
         <div className="container">
           <header className={invert ? "header" : "footer"}>
@@ -33,7 +24,13 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
           </button>
           </header>
             <Carte />
-          <footer className={invert? "footer" : "header"}>Hackathon - 2022</footer>
+            <footer className={invert? "footer" : "header"}>Hackathon - 2022
+            <div>
+                <button onClick={()=> setInvert(!invert)} type="checkbox" className="btn">
+              {" "}
+                </button>
+              </div>
+          </footer>
         </div>
       </div>
     </Context.Provider>

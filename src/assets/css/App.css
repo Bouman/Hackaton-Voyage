@@ -12,7 +12,6 @@
   width: 100vw;
   height: 10vh;
   color:darkgrey;
-
   overflow: hidden;
   background: linear-gradient(90deg, rgba(25, 9, 6, 1) 0%, rgba(210, 153, 86, 1) 50%, rgba(25, 9, 6, 1) 100%);
   box-shadow: -16px 3px 17px 0px black;
@@ -25,11 +24,12 @@
 .carte-wrapper {
   /* background-image: url("../img/carte.png"); */
   position: relative;
+  top: 10vh;
   right: 0;
   left: 0;
   width: 2000px;
   height: 1500px;
-  max-height: 90vh;
+  max-height: 80vh;
   max-width: 100vw;
   overflow: auto;
   -ms-overflow-style: none;
@@ -73,12 +73,32 @@
 .btn {
   display: block;
   position: fixed;
-  /* right: 4vw;
-  top: 3vh; */
-  z-index: 10;
+  margin-left: 60vh;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: yellow;
 }
 
-/* .btn img {
-  cursor: url("../../cursor/cursor.cur"), auto;
-} */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
 
