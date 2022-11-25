@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Carte from "./pages/Carte";
 import './assets/css/App.css';
 import Context from './contexts/Context';
@@ -23,7 +23,7 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
 
   return (
     <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver }}>
-    <div className="App">
+      <div className="App">
         <div className="container">
           <header className={invert ? "header" : "footer"}>
           <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
@@ -36,7 +36,7 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
             )}
           <footer className={invert? "footer" : "header"}>Hackathon - 2022</footer>
         </div>
-    </div>
+      </div>
     </Context.Provider>
   );
 }

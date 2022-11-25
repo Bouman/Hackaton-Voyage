@@ -1,12 +1,13 @@
 import ModaleMonuments from '../components/ModaleMonuments'
+import monumentList from '../Data/MonumentList'
 
-function ModaleDisplay ({id, openMouseOver, setOpenMouseOver }) {
+function ModaleDisplay({ id, openMouseOver, setOpenMouseOver }) {
+  monumentList.map(e => {
     return (
-    <>
-        <div className='main_div'>
-                <ModaleMonuments id ={id} openMouseOver={openMouseOver} />
-        </div>
-    </>
+      <img src={e.icon} alt={e.monumentSize}>
+        <ModaleMonuments id={e.id} openMouseOver={openMouseOver} />
+      </img>
     )
+  })
 }
 export default ModaleDisplay;
