@@ -1,6 +1,7 @@
 import React, {useEffect, useContext} from 'react';
 import Context from '../contexts/Context';
 import monumentList from '../Data/MonumentList'
+import "../assets/css/ModaleMonuments.css"
 
 function ModaleMonuments ({id}) {
     const filtered = monumentList.filter((filterid)=> filterid.id === id)
@@ -22,13 +23,17 @@ function ModaleMonuments ({id}) {
                     <div className='cityName'>{filtered.cityOfMonument}</div>
                     <p>{`${filtered.monumentName}. Ce monument est situé en ${filtered.cityOfMonument} en ${filtered.countryOfMonument}. Il a été réalisé par ${filtered.author} ${filtered.constructionDate}. Mesurant près de ${filtered.monumentSize}, symbolisant ${filtered.symbolique},  qui ammène de nombreux touristes chaque année, environ ${filtered.visitorNumber}, et alimente toujours l'imagination des Hommes.`}
                     </p>
-                    <button
+                    <div onClick = {(e) => {
+                            e.stopPropagation()
+                        }}>
+                        <button
                         type="button"
                         className="Modale-close"
-                        onClick={()=>setOpenMouseOver('')}
+                        onClick={() => setOpenMouseOver(30)}
                         >
                             X
-                    </button>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
