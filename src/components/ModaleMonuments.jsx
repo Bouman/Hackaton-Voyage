@@ -10,10 +10,10 @@ function ModaleMonuments({ id }) {
   if (openMouseOver !== id) return null
   return (
     <div className='main_div'>
-      <div key={filtered.id} className='second_div'>
-        <div className='monumentTitle'>{filtered.monumentName}</div>
-        <img className='monument_image' src={filtered.icon} alt="Description des  monuments" />
+      <div key={filtered.id}>
+        <img className='monument_image' src={filtered.picture} alt="Description des  monuments" />
         <div className='description'>
+          <div className='monumentTitle'>{filtered.monumentName}</div>
           <div className='monumentType'>{filtered.monumentType}</div>
           <div className='monumentSize'>{filtered.monumentSize}</div>
           <div className='monumentCountry'>{filtered.countryOfMonument}</div>
