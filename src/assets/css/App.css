@@ -10,7 +10,7 @@
   left: 0;
   top: 0;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
   color:darkgrey;
   overflow: hidden;
   background: linear-gradient(90deg, rgba(25, 9, 6, 1) 0%, rgba(210, 153, 86, 1) 50%, rgba(25, 9, 6, 1) 100%);
@@ -54,7 +54,7 @@
   left: 0;
   bottom: 0;
   width: 100vw;
-  height: 5vh;
+  height: 10vh;
   overflow: hidden;  
   background: linear-gradient(90deg, rgba(25, 9, 6, 1) 0%, rgba(210, 153, 86, 1) 50%, rgba(25, 9, 6, 1) 100%);
   font-family: 'Libre Baskerville';
@@ -63,4 +63,15 @@
   align-items: center;
   justify-content: space-around;
 }
+.btn {
+  display: block;
+  position: fixed;
+  /* right: 4vw;
+  top: 3vh; */
+  z-index: 10;
+}
+
+/* .btn img {
+  cursor: url("../../cursor/cursor.cur"), auto;
+} */
 

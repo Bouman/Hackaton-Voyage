@@ -4,7 +4,8 @@ import './assets/css/App.css';
 import Context from './contexts/Context';
 import monumentList from "./Data/MonumentList";
 import ModaleMonuments from "./components/ModaleMonuments";
-// import title from "./assets/img/title.png";
+import "./assets/css/App.css";
+import title from "./assets/img/title_reverse.png";
 
 //rotation du titre
 function handleMouseOver(e) {
@@ -26,6 +27,7 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
       <div className="App">
         <div className="container">
           <header className={invert ? "header" : "footer"}>
+            <img src={title} alt="Inversion du titre"/>
           <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
         {" "}
           </button>
