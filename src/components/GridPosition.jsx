@@ -3,7 +3,6 @@ import "../assets/css/GripPosition.css"
 import monumentList from '../Data/MonumentList';
 import Context from '../contexts/Context';
 import ModaleDisplay from '../components/ModaleDisplay';
-// import icon from '../icons/1.png'
 
 function GridPosition() {
   const itemRef = useRef();
@@ -34,40 +33,37 @@ function GridPosition() {
   const { openMouseOver, setOpenMouseOver } = useContext(Context);
 
   return (
-    <> {list && list.map((item, index) => {
-      let icon = item.icon;
-      return (
-        <div
-          className={`Monument-Zone index${index + 1}`}
-          key={item.id}
-          ref={itemRef}
-          style={{
-            animate: false,
-            sticky: false,
-            dragx: true,
-            dragy: true,
-            rotate: false,
-            resort: true,
-            scale: false,
-          }}
-          onClick={() => setOpenMouseOver(item.id)}
-          onMouseLeave={setmoveMap}
-          onMouseDown={setmoveMap}
-          onMouseMove={setmoveMap}
-          onMouseUp={setmoveMap}
-          onTouchStart={(e) => dragStart(e, index)}
-          onTouchMove={(e) => dragStart(e, index)}
-          onTouchEnd={drop}
-          onDragStart={(e) => dragStart(e, index)}
-          onDragEnter={(e) => dragEnter(e, index)}
-          onDragEnd={drop}
-          draggable>
-          {console.log(item.icon)}
-          <img src={item.icon} alt={item.alt} width='100px' height='100px' />
-          <ModaleDisplay id={item.id} openMouseOver={openMouseOver} setOpenMouseOver={setOpenMouseOver} />
-        </div>
-      )
-    })}
+    <> {list && list.map((item, index) => (
+      <div
+        className={`Monument-Zone index${index + 1}`}
+        key={item.id}
+        ref={itemRef}
+        style={{
+          animate: false,
+          sticky: false,
+          dragx: true,
+          dragy: true,
+          rotate: false,
+          resort: true,
+          scale: false,
+        }}
+        onClick={() => setOpenMouseOver(item.id)}
+        onMouseLeave={setmoveMap}
+        onMouseDown={setmoveMap}
+        onMouseMove={setmoveMap}
+        onMouseUp={setmoveMap}
+        onTouchStart={(e) => dragStart(e, index)}
+        onTouchMove={(e) => dragStart(e, index)}
+        onTouchEnd={drop}
+        onDragStart={(e) => dragStart(e, index)}
+        onDragEnter={(e) => dragEnter(e, index)}
+        onDragEnd={drop}
+        draggable>
+        {console.log(item.picture)}
+        <img src={item.icon} alt={item.monumentName} width='70px' heigth='70px' />
+        <ModaleDisplay id={item.id} openMouseOver={openMouseOver} setOpenMouseOver={setOpenMouseOver} />
+      </div>
+    ))}
     </>
   )
 }
