@@ -33,9 +33,6 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
           </button>
           </header>
             <Carte />
-             {monumentList.map((e) =>
-        <ModaleMonuments {...e} changeTexte={5}/>
-            )}
           <footer className={invert? "footer" : "header"}>Hackathon - 2022</footer>
         </div>
       </div>

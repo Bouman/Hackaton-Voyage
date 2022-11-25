@@ -1,11 +1,9 @@
 .main_div {
-  z-index: 10;
+  z-index: 12;
   position: fixed;
   top: 30vh;
   height: 50vh;
-  width: 50vh;
-  height: auto;
-  width: 350px;
+  width: 70vh;
   border: solid rgb(173, 137, 52) 1px;
   background-color: white;
   color: black;
