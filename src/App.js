@@ -20,7 +20,7 @@ const order = ["Statue de l'île de paques", "Statue de la liberté", "Le Christ
           <header className={invert ? "header" : "footer"}>
             <img src={title} alt="Inversion du titre"/>
           <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
-        {" "}
+        <img src="https://res.cloudinary.com/dhfjolvv6/image/upload/v1669383136/sablier_wnmoy2.png" alt="sablier" width="50px"/>
           </button>
           </header>
             <Carte />
