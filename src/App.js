@@ -3,6 +3,7 @@ import Carte from "./pages/Carte";
 import './assets/css/App.css';
 import Context from './contexts/Context';
 import monumentList from "./Data/MonumentList";
+import ModaleMonuments from "./components/ModaleMonuments";
 // import title from "./assets/img/title.png";
 
 //rotation du titre
@@ -15,7 +16,8 @@ function handleMouseLeave(e) {
 }
 
 function App() {
-  
+
+const [invert, setInvert] = useState(true);
 const [moveMap, setmoveMap] = useState(true);
 const [openMouseOver, setOpenMouseOver] = useState(null);
 
@@ -23,17 +25,16 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
     <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver }}>
     <div className="App">
         <div className="container">
-          <header className='header'>
+          <header className={invert ? "header" : "footer"}>
+          <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
+        {" "}
+          </button>
           </header>
             <Carte />
-<<<<<<< HEAD
              {monumentList.map((e) =>
         <ModaleMonuments {...e} changeTexte={5}/>
             )}
-
-=======
->>>>>>> 145d80f1fd0a88f1351567de58aca8d381d9932d
-          <div className='footer'>Hackathon - 2022</div>
+          <footer className={invert? "footer" : "header"}>Hackathon - 2022</footer>
         </div>
     </div>
     </Context.Provider>
