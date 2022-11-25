@@ -1,5 +1,9 @@
 .main_div {
-
+  z-index: 10;
+  position: fixed;
+  top: 30vh;
+  height: 50vh;
+  width: 50vh;
   height: auto;
   width: 350px;
   border: solid rgb(173, 137, 52) 1px;
