@@ -16,14 +16,14 @@ const order = ["Statue de l'île de paques", "Statue de la liberté", "Le Christ
   return (
     <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver, order, isLoading, setIsLoading }}>
       <div className="App">
-        <div className="container">
+        <div>
           <header className={invert ? "header" : "footer"}>
             <img src={title} alt="Inversion du titre"/>
           </header>
-            <Carte />
+            <Carte invert={invert}/>
             <footer className={invert? "footer" : "header"}>Hackathon - 2022
             <div>
-                <button onClick={()=> setInvert(!invert)} type="checkbox" className="btn">
+                <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
               {" "}
                 </button>
               </div>

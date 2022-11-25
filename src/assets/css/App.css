@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Libre Baskerville');
 
-.container {}
+.container {
+}
 
 .header {
   z-index: 10000;
@@ -79,6 +80,15 @@
   border-radius: 50%;
   cursor: pointer;
   background-color: yellow;
+}
+.flipV {
+  transform: scale(1, -1);
+  color: #8ebf42;
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
 }
 
 
