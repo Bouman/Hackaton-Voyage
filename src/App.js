@@ -3,6 +3,7 @@ import Carte from "./pages/Carte";
 import './assets/css/App.css';
 import ModaleMonuments from "./components/ModaleMonuments";
 import Context from './contexts/Context';
+import monumentList from "./Data/MonumentList";
 // import title from "./assets/img/title.png";
 
 //rotation du titre
@@ -26,9 +27,9 @@ const [moveMap, setmoveMap] = useState(true);
           </header>
 
             <Carte />
-            {  /*  {monumentList.map((e) =>
+             {monumentList.map((e) =>
         <ModaleMonuments {...e} changeTexte={5}/>
-            )}*/}
+            )}
 
           <div className='footer'>Hackathon - 2022</div>
         </div>
