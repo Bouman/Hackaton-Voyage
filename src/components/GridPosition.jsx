@@ -59,6 +59,7 @@ function GridPosition (){
                 onDragEnter={(e) => dragEnter(e, index)}
                 onDragEnd={drop}
                 draggable>
+                    {console.log(item.picture)}
                     <img scr={item.picture} alt={item.monumentName}></img>
                     <ModaleDisplay id ={item.id} openMouseOver={openMouseOver} setOpenMouseOver={setOpenMouseOver} />
                 </div>
