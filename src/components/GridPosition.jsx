@@ -13,11 +13,9 @@ function GridPosition() {
 
   const dragStart = (e, position) => {
     dragItem.current = position;
-    console.log(e.target.innerHTML);
   };
   const dragEnter = (e, position) => {
     dragOverItem.current = position;
-    console.log(e.target.innerHTML);
   };
   const drop = (e) => {
     const copyListItems = [...list];
@@ -59,9 +57,8 @@ function GridPosition() {
         onDragEnter={(e) => dragEnter(e, index)}
         onDragEnd={drop}
         draggable>
-        {console.log(item.picture)}
-        <img src={item.icon} alt={item.monumentName} width='70px' heigth='70px' />
-        <ModaleDisplay id={item.id} openMouseOver={openMouseOver} setOpenMouseOver={setOpenMouseOver} />
+        <ModaleDisplay monumentPosition={index} id={item.id} openMouseOver={openMouseOver} setOpenMouseOver={setOpenMouseOver} />
+        <img src={item.icon} alt={item.monumentName} width='70px' heigth='70px' z-index="0"/>
       </div>
     ))}
     </>
