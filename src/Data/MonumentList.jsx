@@ -78,7 +78,7 @@ const monumentList = [
     {
         id : 6 ,
         monumentName : "Les Pyramides du plateau de Gizeh",
-        monumentType : "C'est des Tombeaux royaux",
+        monumentType : "Ce sont des Tombeaux royaux",
         monumentSize : "136 mètres",
         cityOfMonument : "Egypte",
         countryOfMonument : "Plateau de Gizeg",
