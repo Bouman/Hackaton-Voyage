@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Carte from "./pages/Carte";
 import './assets/css/App.css';
 import Context from './contexts/Context';
 import monumentList from "./Data/MonumentList";
-// import title from "./assets/img/title.png";
+import title from "./assets/img/title_reverse.png";
+
 
 //rotation du titre
 function handleMouseOver(e) {
@@ -15,21 +16,21 @@ function handleMouseLeave(e) {
 }
 
 function App() {
-  
-const [moveMap, setmoveMap] = useState(true);
-const [openMouseOver, setOpenMouseOver] = useState(null);
+
+  const [moveMap, setmoveMap] = useState(true);
+  const [openMouseOver, setOpenMouseOver] = useState(null);
 
   return (
     <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver }}>
-    <div className="App">
+      <div className="App">
         <div className="container">
           <header className='header'>
+            <img src={title} alt="title" />
           </header>
-            <Carte />
-
+          <Carte />
           <div className='footer'>Hackathon - 2022</div>
         </div>
-    </div>
+      </div>
     </Context.Provider>
   );
 }
