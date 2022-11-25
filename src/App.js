@@ -16,9 +16,10 @@ const order = ["Statue de l'île de paques", "Statue de la liberté", "Le Christ
   return (
     <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver, order, isLoading, setIsLoading }}>
       <div className="App">
-        <div className="container">
+        <div>
           <header className={invert ? "header" : "footer"}>
             <img src={title} alt="Inversion du titre"/>
+       <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
           <button onClick={()=> setInvert(!invert)} type="submit" className="btn">
         <img src="https://res.cloudinary.com/dhfjolvv6/image/upload/v1669383136/sablier_wnmoy2.png" alt="sablier" width="50px"/>
           </button>
@@ -38,3 +39,4 @@ const order = ["Statue de l'île de paques", "Statue de la liberté", "Le Christ
 }
 
 export default App;
+

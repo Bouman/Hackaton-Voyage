@@ -3,7 +3,7 @@ import IMG from "../assets/img/carte.png";
 import GridPosition from '../components/GridPosition';
 import Context from "../contexts/Context";
 
-function Carte() {
+function Carte({invert}) {
   const [list, setList] = useState(['Item 1','Item 2','Item 3','Item 4','Item 5','Item 6']);
   const refCarte = useRef(null);
   const refMonu = useRef(null);
@@ -55,7 +55,7 @@ useEffect(() => {
       <> 
         {moveMap ?
                 <div
-                className="carte-wrapper"
+                className={`carte-wrapper${!invert && " flipV" }`}
                 ref={refCarte}
                 id="items-carte"
                 onMouseDown={e => mouseIsDown(e)}
