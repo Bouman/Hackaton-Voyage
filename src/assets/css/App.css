@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Libre Baskerville');
 
-.container {
-}
-.header{
-  z-index: 1;
+.container {}
+
+.header {
+  z-index: 10000;
   position: fixed;
   display: block;
   right: 0;
@@ -11,7 +11,7 @@
   top: 0;
   width: 100vw;
   height: 5vh;
-  color:darkgrey;
+  color: darkgrey;
   overflow: hidden;
   background: linear-gradient(90deg, rgba(25, 9, 6, 1) 0%, rgba(210, 153, 86, 1) 50%, rgba(25, 9, 6, 1) 100%);
   box-shadow: -16px 3px 17px 0px black;
@@ -20,34 +20,40 @@
   align-items: center;
   justify-content: space-around;
 }
-.carte-wrapper{
+
+.carte-wrapper {
   /* background-image: url("../img/carte.png"); */
   position: relative;
-  top:5vh;
   right: 0;
   left: 0;
-  bottom: 5vh;
   width: 2000px;
-  height: 1333px;
+  height: 1500px;
   max-height: 90vh;
   max-width: 100vw;
   overflow: auto;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
-.carte::-webkit-scrollbar, .carte-wrapper::-webkit-scrollbar {
+
+.carte::-webkit-scrollbar,
+.carte-wrapper::-webkit-scrollbar {
   display: none;
 }
+
 .carte {
   position: initial !important;
   width: 100%;
   height: 100%;
   overflow: auto;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-.footer{
+.footer {
   z-index: 1;
   position: fixed;
   right: 0;
@@ -55,7 +61,7 @@
   bottom: 0;
   width: 100vw;
   height: 5vh;
-  overflow: hidden;  
+  overflow: hidden;
   background: linear-gradient(90deg, rgba(25, 9, 6, 1) 0%, rgba(210, 153, 86, 1) 50%, rgba(25, 9, 6, 1) 100%);
   font-family: 'Libre Baskerville';
   display: flex;
