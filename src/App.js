@@ -26,13 +26,7 @@ const [openMouseOver, setOpenMouseOver] = useState(null);
           <header className='header'>
           </header>
             <Carte />
-<<<<<<< HEAD
-             {monumentList.map((e) =>
-        <ModaleMonuments {...e} changeTexte={5}/>
-            )}
 
-=======
->>>>>>> 145d80f1fd0a88f1351567de58aca8d381d9932d
           <div className='footer'>Hackathon - 2022</div>
         </div>
     </div>
