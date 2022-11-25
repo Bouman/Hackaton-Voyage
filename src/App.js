@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Carte from "./pages/Carte";
 import './assets/css/App.css';
-import ModaleMonuments from "./components/ModaleMonuments";
 import Context from './contexts/Context';
 // import title from "./assets/img/title.png";
 
@@ -17,19 +16,15 @@ function handleMouseLeave(e) {
 function App() {
   
 const [moveMap, setmoveMap] = useState(true);
+const [openMouseOver, setOpenMouseOver] = useState(null);
+
   return (
-    <Context.Provider value={{ moveMap, setmoveMap }}>
+    <Context.Provider value={{ moveMap, setmoveMap, openMouseOver, setOpenMouseOver }}>
     <div className="App">
         <div className="container">
           <header className='header'>
-            {/* <img src={title} alt="title" className="titleImg" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} /> */}
           </header>
-
             <Carte />
-            {  /*  {monumentList.map((e) =>
-        <ModaleMonuments {...e} changeTexte={5}/>
-            )}*/}
-
           <div className='footer'>Hackathon - 2022</div>
         </div>
     </div>

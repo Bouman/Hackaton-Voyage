@@ -1,14 +1,3 @@
-import tour_eiffel_site from '../assets/img/BatimentPictures/tour_eiffel.png';
-import liberte from '../assets/img/BatimentPictures/statue_liberte.png';
-import taj_mahal_site from '../assets/img/BatimentPictures/taj_mahal.png';
-import christ from '../assets/img/BatimentPictures/christ.png';
-import cite_interdite_site from '../assets/img/BatimentPictures/cite_interdite.png';
-import pyramides_site from '../assets/img/BatimentPictures/pyramides.png';
-import paques from '../assets/img/BatimentPictures/paques.png';
-import london from '../assets/img/BatimentPictures/london.png';
-import colisee from '../assets/img/BatimentPictures/colisee.png';
-import temple_budha from '../assets/img/BatimentPictures/paques.png';
-
 const monumentList = [
     {
         id : 1,
@@ -18,7 +7,7 @@ const monumentList = [
         cityOfMonument : "Paris",
         countryOf: "France",
         constructionDate : "le 31 mars 1889",
-        picture :{tour_eiffel_site},
+        picture :"../../public/img/BatimentPictures/tour_eiffel.png",
         visitorNumber : "7 millions par an",
         symbolique : "le savoir-faire français",
         author : "Gustave Eiffel",
@@ -31,7 +20,7 @@ const monumentList = [
         cityOfMonument : "New York",
         countryOfMonument : "Etats-Unis",
         constructionDate : "le 28 octobre 1886",
-        picture : {liberte},
+        picture : "../../public/img/BatimentPictures/statue_liberte.png",
         visitorNumber : "4 millions de visiteurs par an",
         symbolique : "la Liberté des peuples dans le Monde",
         author : "Gustave Eiffel",
@@ -44,7 +33,7 @@ const monumentList = [
         cityOfMonument : "Agra",
         countryOfMonument : "Inde",
         constructionDate : "entre 1631 et 1653",
-        picture : {taj_mahal_site},
+        picture : '../../public/img/BatimentPictures/taj_mahal.png',
         visitorNumber : "7 millions de visiteurs par an",
         symbolique : "un amour éternel",
         author : "Shah Jahan",
@@ -57,7 +46,7 @@ const monumentList = [
         cityOfMonument : "rio de janeiro",
         countryOfMonument : "Braisil",
         constructionDate : "le 12 octobre 1931",
-        picture : {christ},
+        picture : '../../public/img/BatimentPictures/christ.png',
         visitorNumber : "600 milles par an",
         symbolique : "la ferveur religieuse du Brasil",
         author : "Paul Landowski",
@@ -70,7 +59,7 @@ const monumentList = [
         cityOfMonument : "Pékin",
         countryOfMonument : "Chine",
         constructionDate : "entre 1406 et 1420",
-        picture : {cite_interdite_site},
+        picture : '../../public/img/BatimentPictures/cite_interdite.png',
         visitorNumber : "10 millions par an",
         symbolique : "la puissance de l'empire féodale chinois",
         author : "Zhang Yimou",
@@ -83,7 +72,7 @@ const monumentList = [
         cityOfMonument : "Egypte",
         countryOfMonument : "Plateau de Gizeg",
         constructionDate : "entre -2560 et -1526 avant J-C",
-        picture : {pyramides_site},
+        picture : '../../public/img/BatimentPictures/pyramides.png',
         visitorNumber : "10 millions par ans",
         symbolique : "la grandeur de l'Ancien empire égyptien",
         author : "des esclaves des Pharaons",
@@ -96,7 +85,7 @@ const monumentList = [
         cityOfMonument : "Rome",
         countryOfMonument : "Italie",
         constructionDate : "en l'an 80",
-        picture : {colisee},
+        picture : '../../public/img/BatimentPictures/colisee.png',
         visitorNumber : "6 millons/an",
         symbolique : "la force du peuple, la toute-puissance romaine",
         author : "Vespasien Titus",
@@ -109,33 +98,33 @@ const monumentList = [
         cityOfMonument : "Londres",
         countryOfMonument : "Royaume-Uni",
         constructionDate : "en 1078",
-        picture : {london},
+        picture : '../../public/img/BatimentPictures/london.png',
         visitorNumber : "2.5 Millions par an",
         symbolique : "la monarchie britannique",
         author : "Guillaume le Conquérant",
     },
     {
-        id : 8,
+        id : 9,
         monumentName : "Le temple du Bouddha d'émeraude",
         monumentType : "c'est un site religieux",
         monumentSize : "11 metres",
         cityOfMonument : "Thaïlande",
         countryOfMonument : "République de Thaïlande",
         constructionDate : "entre 1782-1784",
-        picture : {temple_budha},
+        picture : '../../public/img/BatimentPictures/paques.png',
         visitorNumber : "8 millions par ans",
         symbolique : "la religion bouddhiste",
         author : "Râma Ier" , 
     },
     {
-        id : 9,
+        id : 10,
         monumentName : "Les statues de l'île de Pâques",
         monumentType : "c'est site religieux",
         monumentSize : "2 à 8m de haut",
         cityOfMonument : " l'île de Pâques ",
         countryOfMonument : "Chili",
         constructionDate : "entre le 13e-15e siecle",
-        picture : {paques},
+        picture : '../../public/img/BatimentPictures/paques.png',
         visitorNumber : "80000 par ans",
         symbolique : "le culte des Moaïs",
         author : "des sculpteurs Polynésiens",
